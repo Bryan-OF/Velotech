@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Velotech</title>
 </head>
 <body>
@@ -44,63 +44,70 @@
 
         <!-- Map Section -->
         <section>
+
+            <div class="categorie">
+                <h3>Kies een categorie</h3>
+                <div class="balk-1"></div>
+            </div>
+
             <nav>
-                <div>
-                    <h3>Kies categorie</h3>
-                    <div class="balk-1"></div>
-                </div>
-
-                <ul>
+                <ul class="schade-objecten">
                     <li>
-                        <div></div>
+                        <div class="balk-2"></div>
                         <button type="button">Lichtmasten</button>
-                        <div></div>
-
-                        <ul>
-                            <li><button type="button">Aanslag</button></li>
-                            <li><button type="button">Deuken & Gaten</button></li> 
-                            <li><button type="button">Scheefstand</button></li>
-                            <li><button type="button">Stickers & Graffiti</button></li>
-                            <li><button type="button">Verf & Dekking</button></li>
-                        </ul>
+                        <div class="balk-2" id="Lichtmasten"></div>
                     </li>
-                    <li>
-                        <div></div>
-                        <button type="button">Borden</button>
-                        <div></div>
 
-                        <ul>
-                            <li><button type="button">Aanslag</button></li>
-                            <li><button type="button">Deuken & Gaten</button></li>
-                            <li><button type="button">Kleurechtheid</button></li>
-                            <li><button type="button">Scheefstand</button></li>
-                            <li><button type="button">Stickers & Graffiti</button></li>
-                            <li><button type="button">Verdraaiing</button></li>
-                            <li><button type="button">Verf & Dekking</button></li>
-                        </ul>
-                    </li>
                     <li>
-                        <div></div>
+                        <div class="balk-2"></div>
+                        <button type="button" class="">Borden</button>
+                        <div class="balk-2" id="Borden"></div>
+                    </li>
+
+                    <li>
+                        <div class="balk-2"></div>
                         <button type="button">Wegdek</button>
-                        <div></div>
-
-                        <ul>
-                            <li><button type="button">Oneffenheden</button></li>
-                            <li><button type="button">Onkruid</button></li>
-                            <li><button type="button">Rafeling</button></li>
-                            <li><button type="button">Schade bij wegmarkering</button></li>
-                            <li><button type="button">Scheurvorming</button></li>
-                            <li><button type="button">Wortelopdruk</button></li>
-                        </ul>
+                        <div class="balk-2" id="Wegdek"></div>
                     </li>
+                </ul>
+
+                <ul class="schade-levels" id="Lichtmasten">
+                    <li><button type="button">Aanslag</button></li>
+                    <li><button type="button">Deuken & Gaten</button></li> 
+                    <li><button type="button">Scheefstand</button></li>
+                    <li><button type="button">Stickers & Graffiti</button></li>
+                    <li><button type="button">Verf & Dekking</button></li>
+                </ul>
+                
+                <ul class="schade-levels" id="Borden">
+                    <li><button type="button">Aanslag</button></li>
+                    <li><button type="button">Deuken & Gaten</button></li>
+                    <li><button type="button">Kleurechtheid</button></li>
+                    <li><button type="button">Scheefstand</button></li>
+                    <li><button type="button">Stickers & Graffiti</button></li>
+                    <li><button type="button">Verdraaiing</button></li>
+                    <li><button type="button">Verf & Dekking</button></li>
+                </ul>
+
+                <ul class="schade-levels" id="Wegdek">
+                    <li><button type="button">Oneffenheden</button></li>
+                    <li><button type="button">Onkruid</button></li>
+                    <li><button type="button">Rafeling</button></li>
+                    <li><button type="button">Schade bij wegmarkering</button></li>
+                    <li><button type="button">Scheurvorming</button></li>
+                    <li><button type="button">Wortelopdruk</button></li>
                 </ul>
             </nav>
 
-            <h3>Lichtenmasten met beschadeging in Den Haag</h3>
+            <div class="map-container">
+                <h3>Lichtenmasten met beschadeging in Den Haag</h3>
 
-            <iframe src="borden-All.html"></iframe>
-
-            <div id="my_dataviz"></div>
+                <div class="map">
+                    <iframe src="borden-All.html"></iframe>
+    
+                    <div id="my_dataviz"></div>
+                </div>
+            </div>
         </section>
         <!-- End of Map Section -->
 
@@ -108,58 +115,197 @@
         <!-- Info Section -->
         <section>
             <article>
-                <h3>Gradering-Systeem</h3>
-                <div>
+                <h3>Schademetingen</h3>
+                <div id="Lichtmasten">
                     <figure>
                         <img src="images/image 2.png" alt="">
-                        <figcaption>B</figcaption>
-                        <div></div>
-                        <p>
-                            Het bord is beplakt met grotere stickers of affiches of is beklad met een 
-                            kleine tekening.
+                        <div class="description">
+                            <figcaption>B</figcaption>
+                            <figcaption>- Matig</figcaption>
+                        </div>
+                        <div class="bottom-bar"></div>
+                        <p class="long-description">
+                            Het bord is beplakt met grotere stickers of affiches of is beklad 
+                            met een kleine tekening.
                         </p>
 
-                        <div></div>
+                        <div class="bottom-bar"></div>
                         <h4>Mate van beplakking/graffiti</h4>
                         <p>5% per stuk</p>
 
-                        <div></div> 
+                        <div class="bottom-bar"></div> 
                         <h4>Racisme/aanstootgevend</h4>
                         <p>Nee</p>
                     </figure>
 
                     <figure>
                         <img src="images/image 2.png" alt="">
-                        <figcaption>C</figcaption>
-                        <div></div>
-                        <p>
+                        <div class="description">
+                            <figcaption>C</figcaption>
+                            <figcaption>- Aanmerkelijk</figcaption>
+                        </div>
+                        <div class="bottom-bar"></div>
+                        <p class="long-description">
                             Een groot deel van het bord is beplakt met een affiche/affiches of is 
                             beklad met een tekening.
                         </p>
 
-                        <div></div> 
+                        <div class="bottom-bar"></div> 
                         <h4>Mate van beplakking/graffiti</h4>
                         <p>10% per stuk</p>
 
-                        <div></div> 
+                        <div class="bottom-bar"></div> 
                         <h4>Racisme/aanstootgevend</h4>
                         <p>Nee</p>
                     </figure>
 
                     <figure>
                         <img src="images/image 2.png" alt="">
-                        <figcaption>D</figcaption>
+                        <div class="description">
+                            <figcaption>C</figcaption>
+                            <figcaption>- Ernstig</figcaption>
+                        </div>
                         <div class="bottom-bar"></div>
-                        <p>
+                        <p class="long-description">
                             Een zeer groot deel van het bord is beplakt met een affiche/affiches 
                             en/of is beklad met een forse tekening.
                         </p>
 
-                        <div></div> 
+                        <div class="bottom-bar"></div> 
                         <h4>Mate van beplakking/graffiti</h4>
                         <p>10% per stuk</p>
 
-                        <div></div> 
+                        <div class="bottom-bar"></div> 
+                        <h4>Racisme/aanstootgevend</h4>
+                        <p>Ja</p>
+                    </figure>
+                </div>
+
+                <div id="Borden">
+                    <figure>
+                        <img src="images/image 2.png" alt="">
+                        <div class="description">
+                            <figcaption>B</figcaption>
+                            <figcaption>- Matig</figcaption>
+                        </div>
+                        <div class="bottom-bar"></div>
+                        <p class="long-description">
+                            Het bord is beplakt met grotere stickers of affiches of is beklad 
+                            met een kleine tekening.
+                        </p>
+
+                        <div class="bottom-bar"></div>
+                        <h4>Mate van beplakking/graffiti</h4>
+                        <p>5% per stuk</p>
+
+                        <div class="bottom-bar"></div> 
+                        <h4>Racisme/aanstootgevend</h4>
+                        <p>Nee</p>
+                    </figure>
+
+                    <figure>
+                        <img src="images/image 2.png" alt="">
+                        <div class="description">
+                            <figcaption>C</figcaption>
+                            <figcaption>- Aanmerkelijk</figcaption>
+                        </div>
+                        <div class="bottom-bar"></div>
+                        <p class="long-description">
+                            Een groot deel van het bord is beplakt met een affiche/affiches of is 
+                            beklad met een tekening.
+                        </p>
+
+                        <div class="bottom-bar"></div> 
+                        <h4>Mate van beplakking/graffiti</h4>
+                        <p>10% per stuk</p>
+
+                        <div class="bottom-bar"></div> 
+                        <h4>Racisme/aanstootgevend</h4>
+                        <p>Nee</p>
+                    </figure>
+
+                    <figure>
+                        <img src="images/image 2.png" alt="">
+                        <div class="description">
+                            <figcaption>C</figcaption>
+                            <figcaption>- Ernstig</figcaption>
+                        </div>
+                        <div class="bottom-bar"></div>
+                        <p class="long-description">
+                            Een zeer groot deel van het bord is beplakt met een affiche/affiches 
+                            en/of is beklad met een forse tekening.
+                        </p>
+
+                        <div class="bottom-bar"></div> 
+                        <h4>Mate van beplakking/graffiti</h4>
+                        <p>10% per stuk</p>
+
+                        <div class="bottom-bar"></div> 
+                        <h4>Racisme/aanstootgevend</h4>
+                        <p>Ja</p>
+                    </figure>
+                </div>
+
+                <div id="Wegdek">
+                    <figure>
+                        <img src="images/image 2.png" alt="">
+                        <div class="description">
+                            <figcaption>B</figcaption>
+                            <figcaption>- Matig</figcaption>
+                        </div>
+                        <div class="bottom-bar"></div>
+                        <p class="long-description">
+                            Het bord is beplakt met grotere stickers of affiches of is beklad 
+                            met een kleine tekening.
+                        </p>
+
+                        <div class="bottom-bar"></div>
+                        <h4>Mate van beplakking/graffiti</h4>
+                        <p>5% per stuk</p>
+
+                        <div class="bottom-bar"></div> 
+                        <h4>Racisme/aanstootgevend</h4>
+                        <p>Nee</p>
+                    </figure>
+
+                    <figure>
+                        <img src="images/image 2.png" alt="">
+                        <div class="description">
+                            <figcaption>C</figcaption>
+                            <figcaption>- Aanmerkelijk</figcaption>
+                        </div>
+                        <div class="bottom-bar"></div>
+                        <p class="long-description">
+                            Een groot deel van het bord is beplakt met een affiche/affiches of is 
+                            beklad met een tekening.
+                        </p>
+
+                        <div class="bottom-bar"></div> 
+                        <h4>Mate van beplakking/graffiti</h4>
+                        <p>10% per stuk</p>
+
+                        <div class="bottom-bar"></div> 
+                        <h4>Racisme/aanstootgevend</h4>
+                        <p>Nee</p>
+                    </figure>
+
+                    <figure>
+                        <img src="images/image 2.png" alt="">
+                        <div class="description">
+                            <figcaption>C</figcaption>
+                            <figcaption>- Ernstig</figcaption>
+                        </div>
+                        <div class="bottom-bar"></div>
+                        <p class="long-description">
+                            Een zeer groot deel van het bord is beplakt met een affiche/affiches 
+                            en/of is beklad met een forse tekening.
+                        </p>
+
+                        <div class="bottom-bar"></div> 
+                        <h4>Mate van beplakking/graffiti</h4>
+                        <p>10% per stuk</p>
+
+                        <div class="bottom-bar"></div> 
                         <h4>Racisme/aanstootgevend</h4>
                         <p>Ja</p>
                     </figure>

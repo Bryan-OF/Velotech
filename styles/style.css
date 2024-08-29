@@ -14,12 +14,6 @@
 
 
 
-/* ****** */
-/* COLORS */
-/* ****** */
-
-
-
 :root {
     --colour-huisstyle-White: #FFFFFF;
     --colour-huisstyle-DarkPurlpe: #1E152B;
@@ -40,6 +34,19 @@ body {
     color: var(--colour-huisstyle-White);
 }
 
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+ul {
+    list-style-type: none;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -50,11 +57,6 @@ header {
     width: 100%;
     padding: 2em 8em;
     align-items: baseline;
-}
-
-header h1 {
-    font-size: 2em;
-    font-weight: 700;
 }
 
 button {
@@ -115,14 +117,18 @@ main {
 section {
     height: 100%;
     scroll-snap-align: start;
-    padding: 1em;
+    padding: 5em 0 1em;
+}
+
+section:nth-child(n+2) {
+    padding: 0 8em;
 }
 
 
 
-/* ****** */
+/* *********** */
 /* Section One */
-/* ****** */
+/* *********** */
 
 
 
@@ -132,15 +138,6 @@ section:nth-of-type(1) {
 
     height: 25vh;
     height: 25dvh;
-    padding-top: 5em;
-}
-
-#my_dataviz {
-    width: 460px;
-    height: 400px;
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 10px;
 }
 
 .line-group {
@@ -176,6 +173,12 @@ section:nth-of-type(1) {
     width: 20em;
 }
 
+
+/* *********** */
+/* Intro Text */
+/* *********** */
+
+
 hgroup {
     display: flex;
     flex-direction: column;
@@ -192,24 +195,173 @@ hgroup h2 {
     font-weight: 600;
 }
 
-article {
-    padding: 2em 20%;
+.balk-1 {
+    background-color: var(--colour-huisstyle-Blue);
+    height: .25em;
+    width: 12em;
+}
+
+.categorie {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.balk-2 {
+    background-color: var(--colour-huisstyle-Blue);
+    height: .2em;
+    width: 1.2em;
+}
+
+
+
+/* *********** */
+/* Section Two */
+/* *********** */
+
+
+
+section:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+section:nth-of-type(2) > nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    height: 20em;
+}
+
+
+/* *************** */
+/* Schade-objecten */
+/* *************** */
+
+
+.schade-objecten {
+    display: flex;
+    flex-direction: column;
+}
+
+.schade-objecten > li {
+    font-size: 1.6em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+ul:nth-of-type(1) li > button {
+    width: 6em;
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-thickness: 0.2em;
+    text-decoration-color: var(--colour-huisstyle-Blue);
+}
+
+
+/* ************* */
+/* Schade-levels */
+/* ************* */
+
+
+.schade-levels {
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+}
+
+ul:nth-child(n+2) li > button {
+    width: 12em;
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-thickness: 0.2em;
+    text-decoration-color: var(--colour-huisstyle-Blue);
+}
+
+
+/* ****************************************** */
+/* Lichtenmasten met beschadeging in Den Haag */
+/* ****************************************** */
+
+.map-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    height: 100%;
+}
+
+.map {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 2em;
+}
+
+
+iframe {
+    width: 70%;
+    height: 100%;
+    border: none;
+}
+
+#my_dataviz {
+    width: 30%;
+    height: 50%;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+
+/* ***************** */
+/* Gradering-Systeem */
+/* ***************** */
+
+
+section:nth-of-type(3) {
+    padding-top: 4em;
 }
 
 article div {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
+    align-items: flex-start;
 }
 
 article div figure {
     display: flex;
-    padding: 2em 0;
     flex-direction: column;
+    
     align-items: flex-start;
     gap: 1em;
     width: 20em;
+    padding: 2em 0;
+}
+
+figcaption:nth-child(even) {
+    font-size: 1.4em;
+    font-weight: 100;
+}
+
+figcaption:nth-child(odd) {
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    gap: .5em;
+    align-items: center;
 }
 
 article div figure img {
@@ -221,31 +373,12 @@ article div figure p {
     width: 100%;
 }
 
-figure > div {
+.long-description {
+    height: 3.5em;
+}
+
+.bottom-bar {
     background-color: var(--colour-huisstyle-Blue);
     height: .25em;
     width: 50%;
-}
-
-section:nth-of-type(2) > nav div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1em;
-}
-
-.balk-1 {
-    background-color: var(--colour-huisstyle-Blue);
-    height: .25em;
-    width: 12em;
-}
-
-/* ****** */
-/* Section Two */
-/* ****** */
-
-section:nth-of-type(2) > nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em 10% 1em 40%;
 }
