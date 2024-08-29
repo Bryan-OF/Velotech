@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Velotech</title>
+</head>
+<body>
+    <header>
+        <h1>Velotech AI</h1>
+        <nav>
+            <!-- <button>Info</button> -->
+            <a href="#">
+                <svg id="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 28" fill="none">
+                    <path d="M2 14L15.7143 2M2 14L15.7143 26M2 14L34 14" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="profile-button"></div>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Welcom Section-->
+        <section>
+            <div class="line-group">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+                <div class="line-4"></div>
+            </div>
+            <hgroup>
+                <h2>Welkom</h2>
+                <p>
+                    Velotech AI detecteert en meet automatisch alle soorten schade aan deze objecten, variërend van kleine beschadigingen tot ernstige 
+                    afwijkingen. Met dit dashboard  kunt u snel en accuraat de schade beoordelen, onderhoudsprioriteiten bepalen, en de verkeersveiligheid 
+                    in uw omgeving verbeteren.
+                </p>
+            </hgroup>
+        </section> 
+        <!-- End of Welkom Section -->
+
+
+        <!-- Map Section -->
+        <section>
+            <nav>
+                <div>
+                    <h3>Kies categorie</h3>
+                    <div class="balk-1"></div>
+                </div>
+
+                <ul>
+                    <li>
+                        <div></div>
+                        <button type="button">Lichtmasten</button>
+                        <div></div>
+
+                        <ul>
+                            <li><button type="button">Aanslag</button></li>
+                            <li><button type="button">Deuken & Gaten</button></li> 
+                            <li><button type="button">Scheefstand</button></li>
+                            <li><button type="button">Stickers & Graffiti</button></li>
+                            <li><button type="button">Verf & Dekking</button></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div></div>
+                        <button type="button">Borden</button>
+                        <div></div>
+
+                        <ul>
+                            <li><button type="button">Aanslag</button></li>
+                            <li><button type="button">Deuken & Gaten</button></li>
+                            <li><button type="button">Kleurechtheid</button></li>
+                            <li><button type="button">Scheefstand</button></li>
+                            <li><button type="button">Stickers & Graffiti</button></li>
+                            <li><button type="button">Verdraaiing</button></li>
+                            <li><button type="button">Verf & Dekking</button></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div></div>
+                        <button type="button">Wegdek</button>
+                        <div></div>
+
+                        <ul>
+                            <li><button type="button">Oneffenheden</button></li>
+                            <li><button type="button">Onkruid</button></li>
+                            <li><button type="button">Rafeling</button></li>
+                            <li><button type="button">Schade bij wegmarkering</button></li>
+                            <li><button type="button">Scheurvorming</button></li>
+                            <li><button type="button">Wortelopdruk</button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <h3>Lichtenmasten met beschadeging in Den Haag</h3>
+
+            <iframe src="borden-All.html"></iframe>
+
+            <div id="my_dataviz"></div>
+        </section>
+        <!-- End of Map Section -->
+
+        
+        <!-- Info Section -->
+        <section>
+            <article>
+                <h3>Gradering-Systeem</h3>
+                <div>
+                    <figure>
+                        <img src="images/image 2.png" alt="">
+                        <figcaption>B</figcaption>
+                        <div></div>
+                        <p>
+                            Het bord is beplakt met grotere stickers of affiches of is beklad met een 
+                            kleine tekening.
+                        </p>
+
+                        <div></div>
+                        <h4>Mate van beplakking/graffiti</h4>
+                        <p>5% per stuk</p>
+
+                        <div></div> 
+                        <h4>Racisme/aanstootgevend</h4>
+                        <p>Nee</p>
+                    </figure>
+
+                    <figure>
+                        <img src="images/image 2.png" alt="">
+                        <figcaption>C</figcaption>
+                        <div></div>
+                        <p>
+                            Een groot deel van het bord is beplakt met een affiche/affiches of is 
+                            beklad met een tekening.
+                        </p>
+
+                        <div></div> 
+                        <h4>Mate van beplakking/graffiti</h4>
+                        <p>10% per stuk</p>
+
+                        <div></div> 
+                        <h4>Racisme/aanstootgevend</h4>
+                        <p>Nee</p>
+                    </figure>
+
+                    <figure>
+                        <img src="images/image 2.png" alt="">
+                        <figcaption>D</figcaption>
+                        <div class="bottom-bar"></div>
+                        <p>
+                            Een zeer groot deel van het bord is beplakt met een affiche/affiches 
+                            en/of is beklad met een forse tekening.
+                        </p>
+
+                        <div></div> 
+                        <h4>Mate van beplakking/graffiti</h4>
+                        <p>10% per stuk</p>
+
+                        <div></div> 
+                        <h4>Racisme/aanstootgevend</h4>
+                        <p>Ja</p>
+                    </figure>
+                </div>
+            </article>
+        </section>
+        <!-- End of Info Section -->
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="scripts/javascript.js"></script>    
+</body>
+</html>

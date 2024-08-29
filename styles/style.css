@@ -1,0 +1,251 @@
+/* ****** */
+/* BASICS */
+/* ****** */
+
+
+
+*, ::before, ::after {
+	box-sizing: border-box;
+	font-family: 'Saira', sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ****** */
+/* COLORS */
+/* ****** */
+
+
+
+:root {
+    --colour-huisstyle-White: #FFFFFF;
+    --colour-huisstyle-DarkPurlpe: #1E152B;
+    --colour-huisstyle-Purple: #271748;
+    --colour-huisstyle-Blue: #88C1C8;
+}
+
+
+
+/* **** */
+/* BODY */
+/* **** */
+
+
+
+body {
+    background: linear-gradient(144.427deg, var(--colour-huisstyle-DarkPurlpe) 0%, var(--colour-huisstyle-Purple) 81%);
+    color: var(--colour-huisstyle-White);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: fixed;
+
+    height: 8em;
+    width: 100%;
+    padding: 2em 8em;
+    align-items: baseline;
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+button {
+    color: var(--colour-huisstyle-White);
+    background: none;
+	border: none;
+    border-radius: 1em;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    height: 2em;
+    width: 4em;
+}
+
+header > nav {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 1em;
+}
+
+header > nav > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}
+
+svg {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+#arrow-icon path {
+    stroke: var(--colour-huisstyle-Blue);
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.profile-button {
+    height: 2.5em;
+    width: 2.5em;
+    
+    border: 0.25em solid var(--colour-huisstyle-Blue);
+    border-radius: 2em;
+}
+
+main {
+    height: 100vh;
+    height: 100dvh;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+    scroll-padding-top: 50px;
+    padding: 3em 0 1em;
+}
+
+section {
+    height: 100%;
+    scroll-snap-align: start;
+    padding: 1em;
+}
+
+
+
+/* ****** */
+/* Section One */
+/* ****** */
+
+
+
+section:nth-of-type(1) {
+    display: flex;
+    flex-direction: row;
+
+    height: 25vh;
+    height: 25dvh;
+    padding-top: 5em;
+}
+
+#my_dataviz {
+    width: 460px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.line-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-left: -1em;
+    margin-right: -10em;
+    padding-top: 3.5em;
+}
+
+.line-1 {
+    background-color: var(--colour-huisstyle-Blue);
+    height: .25em;
+    width: 60em;
+}
+
+.line-2 {
+    background-color: var(--colour-huisstyle-Blue);
+    height: .25em;
+    width: 40em;
+}
+
+.line-3 {
+    background-color: var(--colour-huisstyle-Blue);
+    height: .25em;
+    width: 30em;
+}
+
+.line-4 {
+    background-color: var(--colour-huisstyle-Blue);
+    height: .25em;
+    width: 20em;
+}
+
+hgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+hgroup > p {
+    font-size: 1em;
+    width: 60%;
+}
+
+hgroup h2 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+article {
+    padding: 2em 20%;
+}
+
+article div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+article div figure {
+    display: flex;
+    padding: 2em 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    width: 20em;
+}
+
+article div figure img {
+    width: 20em;
+    border-radius: 1em;
+}
+
+article div figure p {
+    width: 100%;
+}
+
+figure > div {
+    background-color: var(--colour-huisstyle-Blue);
+    height: .25em;
+    width: 50%;
+}
+
+section:nth-of-type(2) > nav div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.balk-1 {
+    background-color: var(--colour-huisstyle-Blue);
+    height: .25em;
+    width: 12em;
+}
+
+/* ****** */
+/* Section Two */
+/* ****** */
+
+section:nth-of-type(2) > nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 10% 1em 40%;
+}
