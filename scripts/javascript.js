@@ -1,3 +1,60 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const urls = {
+    // urls van verschillende mappen in een array
+    "Lichtmasten": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/2a8so51ad1w49bz2wup3i/Lichtmasten-beschadigen-in-Den-Haag.json?rlkey=6ndvun096wpf33zaw1ge3p8rb&dl=0",
+    "l-Aanslag": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/ax03jcjkyxgg0v0ji2c4v/Lichtenmasten-met-Verf-Dekking-beschadiging-in-Den-Haag.json?rlkey=soz7vrxjb8g62wi8mct0u3ac6&dl=0",
+    "l-Deuken-Gaten": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/4q0x3y8tfm8du6tmcmi2q/Lichtenmasten-met-Stickers-Graffiti-beschadiging-in-Den-Haag.json?rlkey=p5ayqj4p04a1d0l1e1ra38663&dl=0",
+    "l-Scheefstand": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/0o4vkehsc3ygkzm111cln/Lichtenmasten-met-Scheefstand-beschadiging-in-Den-Haag-Copy.json?rlkey=pxtwx3nv3w378r8me2qgjhfuh&dl=0",
+    "l-Stickers-Graffiti": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/r9fvrhtnc707uv484kfn2/Lichtenmasten-met-Deuken-en-gaten-beschadiging-in-Den-Haag.json?rlkey=41amh9tubsx3gi5467xnywqzn&dl=0",
+    "l-Verf-Dekking": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/9kslbwslaj052cll32sag/Lichtenmasten-met-Aanslag-beschadiging-in-Den-Haag.json?rlkey=on8j6zt7m6wfvkcr6vwfny1i1&dl=0",
+    "Borden": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/t5f8v6czgd63q2qakqoo0/Borden-met-beschadigen-in-Den-Haag-Copy.json?rlkey=jiypcutsrw8qnylo8jskzdckh&dl=0",
+    "b-Aanslag": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/z5hv1qt6hel3sxe9r50nf/Borden-met-Aanslag-beschadiging-in-Den-Haag.json?rlkey=kkteqkf14q8xvl5mh305o5cob&dl=0",
+    "b-Deuken-Gaten": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/wfbb9o5nay0jxntskkvn5/Borden-met-Deuken-Gaten-beschadiging-in-Den-Haag.json?rlkey=3m39oatxilxnwp95racjgd5xt&dl=0",
+    "b-Kleurechtheid": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/hbnpw5jzkrapxpqrn5d3o/Borden-met-Kleurechtheid-beschadiging-in-Den-Haag.json?rlkey=p1sv6x8vxc2v0jzi1kn4ze6aw&dl=0",
+    "b-Scheefstand": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/njds9c7db7518i0fkh0vn/Borden-met-Scheefstand-beschadiging-in-Den-Haag.json?rlkey=x1w4xnqefo7xc2ptbod2131m5&dl=0",
+    "b-Stickers-Graffiti": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/f3uaxjvo4xd0p14jknk64/Borden-met-Stickers-Graffiti-beschadiging-in-Den-Haag.json?rlkey=mlidd3w353ve81jfrmprzee5b&dl=0",
+    "b-Verdraaiing": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/kjupwp0kfsdqz7hwupa81/Borden-met-Verdraaiing-beschadiging-in-Den-Haag.json?rlkey=ayqy06qsxlld7fuzvlb5h8zfy&dl=0",
+    "b-Verf-Dekking": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/0tr95bp3gyvkaw198fuji/Borden-met-Verf-Dekking-beschadiging-in-Den-Haag-Copy.json?rlkey=z6izmurv7w673qjtlkn7on20r&dl=0",
+    "Wegdekken": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/fo290xfnwwx0isbn0pvlp/Wegdekken-met-beschadigen-in-Den-Haag.json?rlkey=178ulxk4e3eh1gi330btk20iv&dl=0",
+    "w-Oneffenheden": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/290m2kfrrdxa87sqqo3km/Wegdekken-met-Oneffenheden-beschadiging-in-Den-Haag.json?rlkey=bn3xrwyrsnhjb1mzwv08ele81&dl=0",
+    "w-Onkruid": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/2ck8ealmz7puzo6q0kz3e/Wegdekken-met-Onkruid-beschadiging-in-Den-Haag.json?rlkey=eowuk5621dtn99f6ij2fnmovd&dl=0",
+    "w-Rafeling": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/0oh3is3qnt2pdy6ijf0nd/Wegdekken-met-Rafeling-beschadiging-in-Den-Haag.json?rlkey=bh1qwfrfnwe7wzn55bujdj189&dl=0",
+    "w-Schade-bij-wegmarkering": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/54zlmosbxkbfbylb828wz/Wegdekken-met-Schade-bij-wegmarkering-beschadiging-in-Den-Haag.json?rlkey=agg1sux3cupg3nip2hmbghfde&dl=0",
+    "w-Scheurvorming": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/ja7qe2ar2qar2so6rw79t/Wegdekken-met-Scheurvorming-beschadiging-in-Den-Haag.json?rlkey=iua1mqkfts1if48d2ugdpu4t4&dl=0",
+    "w-Wortelopdruk": "https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/g2ghxdzvzktew4raipucg/Wegdekken-met-Wortelopdruk-beschadiging-in-Den-Haag.json?rlkey=x8pgafo4a1z7avth1iiej32pv&dl=0",
+  };
+
+  // Selecteer het iframe element
+  const iframe = document.getElementById("mapIframe");
+
+  // Voeg een click event toe aan elke button in de schade-objecten (hoofdcategorieën)
+  const categoryButtons = document.querySelectorAll(".schade-objecten button");
+  categoryButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Haal de URL op uit de array en laad het in het iframe
+      const id = button.textContent.trim();
+      const url = urls[id];
+      if (url) {
+        iframe.src = url;
+      }
+    });
+  });
+
+  // Voeg een click event toe aan elke submenu button in de schade-levels
+  const submenuButtons = document.querySelectorAll(".schade-levels button");
+  submenuButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Haal de URL op uit de array en laad het in het iframe
+      const url = urls[button.id];
+      if (url) {
+        iframe.src = url;
+      }
+    });
+  });
+});
+
+
+
 // ----------------------- //
 // filter code
 // ----------------------- //
